@@ -10,7 +10,8 @@
 
 
 :root{
-    --color-primary: #6c63ff;
+    --color-primary: #f75842;
+
     --color-success: #00bf8e;
     --color-warning: #f7c94b;
     --color-danger: #f75842;
@@ -18,8 +19,8 @@
     --color-white: #fff;
     --color-light: rgba(255,255,255,0.7);
     --color-black: #000;
-    --color-bg:#1f2641;
-    --color-bg1:#2e3267;
+    --color-bg:var(--darkreader-background-ffffff, #181a1b);
+    --color-bg1:var(--darkreader-border-ffffff, #303436);
     --color-bg2:#424890;
 
     --container-width-lg: 76%;
@@ -120,7 +121,9 @@ nav{
     align-items: center; 
 }
 .nav_container img{
-    width: 100px;
+    width: 220px;
+    margin-left: -100px;
+    margin-top: 30px;
 }
 
 nav button{
@@ -234,8 +237,8 @@ header{
 /* CATEGORIES */
 .categories{
     background: var(--color-bg1);
-    height: 29rem;
-}
+    /* height: 29rem; */
+} 
 
 .categories h1{
     line-height: 1;
@@ -257,7 +260,7 @@ header{
 
 .categories_right{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
 }
 
@@ -266,7 +269,7 @@ header{
     padding: 2rem;
     border-radius: 2rem;
     transition: var(--transition);
-}
+} 
 
 .category:hover{
     box-shadow: 0 3rem 3rem rgba(0,0,0,0.3);
@@ -293,9 +296,10 @@ header{
 
 
 .category_icon{
-    background: var(--color-primary);
-    padding: 0.7rem;
-    border-radius: 0.9rem;
+    /* background: var(--color-primary); */
+    /* padding: 1rem; */
+    /* border-radius: 2rem; */
+    height: 1rem;
 }
 
 .category h5{
@@ -307,13 +311,13 @@ header{
 }
 
 /* Populer courses */
-.courses{
+/* .courses{
     margin-top: 10rem;
-}
+} */
 
 .courses_container{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -326,7 +330,11 @@ header{
 
 .courses h2{
     position: relative;
-    top: -19px;
+    top: -40px;
+    font-size: 50px;
+}
+span{
+    /* color: #6c63ff; */
 }
 .course_info{
     padding: 2rem;
@@ -386,6 +394,7 @@ footer ul li a:hover{
     padding: 1.2rem 0;
     border-top: 1px solid var(--color-bg2);
     text-align: center;
+    margin-right: 10rem;
 }
 
 /* MEDIA QUERIES (TABLETS) */
